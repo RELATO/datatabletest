@@ -10,9 +10,12 @@ import { Demo2Component } from './demo2.component';
 import { FormsComponent, PasswordMatcher } from '../forms/forms.component';
 import { ReactiveFormsComponent } from '../reactive-forms/reactive-forms.component';
 import { SwitchControlComponent } from '../switch-control/switch-control.component';
+import { SharedModule } from '../shared';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
+    SharedModule,
     CommonModule,
     Demo2RoutingModule,
     FormsModule,
@@ -20,6 +23,7 @@ import { SwitchControlComponent } from '../switch-control/switch-control.compone
     MdButtonModule, MdCheckboxModule, MdMenuModule, MdInputModule,
     MdToolbarModule, MdDialogModule, MdSidenavModule, MdNativeDateModule,
     MaterialModule,
+    BrowserModule
   ],
   declarations: [Demo2Component,
     FormsComponent,
