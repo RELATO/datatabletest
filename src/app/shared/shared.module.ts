@@ -1,14 +1,8 @@
-/**
- * Arquivo de configuração do módulo compartilhado.
- *
- * @author Márcio Casale de Souza <contato@kazale.com>
- * @since 0.0.3
- */
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { NotificationSharedModule } from '../shared/modules/notification.module';
+import { NotificationService } from '../shared/services/notification.service';
 import { 
   KzCepPipe,
   KzCpfPipe,
@@ -27,7 +21,8 @@ import {
 @NgModule({
   imports:      [ 
   	CommonModule,
-  	FormsModule 
+    FormsModule,
+    NotificationSharedModule 
   ],
   declarations: [ 
   	KzCepPipe,
@@ -58,6 +53,10 @@ import {
     KzPikadayDirective,
     CommonModule, 
     FormsModule 
+  ],
+  providers: [
+    NotificationService
   ]
+
 })
 export class SharedModule {}
